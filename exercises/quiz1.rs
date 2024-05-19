@@ -13,10 +13,16 @@
 //
 // No hints this time ;)
 
-// I AM NOT DONE
-
 // Put your function here!
-// fn calculate_price_of_apples {
+fn calculate_price_of_apples(qt: i32) -> i32 {
+    let mut price_of_single_apple = 2;
+
+    if qt > 40 {
+        price_of_single_apple = 1;
+    }
+
+    qt * price_of_single_apple
+}
 
 // Don't modify this function!
 #[test]

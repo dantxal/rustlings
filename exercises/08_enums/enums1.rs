@@ -2,16 +2,26 @@
 //
 // No hints this time! ;)
 
-// I AM NOT DONE
-
 #[derive(Debug)]
 enum Message {
-    // TODO: define a few types of messages as used below
+    Quit,
+    // like tuple structs,
+    Echo(char),
+    Move(String),
+    // or c-like structures.
+    ChangeColor { red: i32, green: i32, blue: i32 },
 }
 
 fn main() {
     println!("{:?}", Message::Quit);
-    println!("{:?}", Message::Echo);
-    println!("{:?}", Message::Move);
-    println!("{:?}", Message::ChangeColor);
+    println!("{:?}", Message::Echo('c'));
+    println!("{:?}", Message::Move("Somewhere".to_string()));
+    println!(
+        "{:?}",
+        Message::ChangeColor {
+            red: 0,
+            green: 244,
+            blue: 100
+        }
+    );
 }
